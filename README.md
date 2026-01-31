@@ -1,16 +1,71 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Book Store – Fullstack Web Application
 
-Currently, two official plugins are available:
+## Description
+This is a **Fullstack Web Application** for a Book Store, including both **Frontend** and **Backend**.  
+It provides essential functionalities: user registration, login, displaying products, managing user profiles, and creating/updating/deleting books.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## React Compiler
+### Frontend
+- **Signup & Login**: Pages for user registration and login with data validation.  
+- **Home Page**: Dynamic display of books.  
+- **Profile Page**: View and update user information.  
+- **Products Page**: Add, edit, delete, and view books interactively.  
+- **Responsive Design**: Compatible with desktop, tablet, and mobile devices.  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Backend
+- **Node.js + Express**: Build RESTful APIs to handle user and book data.  
+- **MySQL + Sequelize**: Relational database to store users, books, and their relationships.  
+- **CRUD Operations**: Create, Read, Update, Delete for users and books.  
+- **CORS Handling**: Enable secure requests between Frontend and Backend.  
+- **Data Validation & Security**: Input validation and error handling.  
 
-## Expanding the ESLint configuration
+## API Endpoints
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Users
+| Method | Endpoint             | Description                   |
+|--------|--------------------|-------------------------------|
+| POST   | /api/users/signup   | Create a new user             |
+| POST   | /api/users/login    | User login                    |
+| GET    | /api/users/profile  | View user profile             |
+| PUT    | /api/users/profile  | Update user profile           |
+
+### Books
+| Method | Endpoint                 | Description                       |
+|--------|--------------------------|-----------------------------------|
+| GET    | /api/products            | Get all books                     |
+| POST   | /api/products            | Add a new book                    |
+| GET    | /api/products/:id        | Get a specific book details       |
+| PUT    | /api/products/:id        | Update a specific book            |
+| DELETE | /api/products/:id        | Delete a specific book            |
+
+## Technologies Used
+- **Frontend**: React, Tailwind CSS, React Router DOM, Axios  
+- **Backend**: Node.js, Express, MySQL, Sequelize, CORS  
+- **Version Control**: Git & GitHub  
+- **Development Tools**: VS Code, Postman  
+
+## Installation
+
+### Backend
+```bash
+cd backend
+npm install
+npm run start-dev
+```
+
+### Frontend
+cd frontend
+npm install
+npm run dev
+
+Usage
+
+Register a new account or login.
+
+Browse books on the Home page.
+
+Manage your profile on the Profile page.
+
+Add, edit, or delete books on the Products page.
